@@ -121,3 +121,39 @@
 25/09/2024 10:41:33 - admin a rendu l'article : Casble HDMI, quantité : 15
 25/09/2024 10:41:44 - test a supprimé l'article g'gzrzsasas
 25/09/2024 10:41:56 - test a modifié l'article Cable HDMI
+25/09/2024 11:28:41 - test a crée un article : Casble HDMI
+25/09/2024 11:48:48 - test a crée un article : Casble HDMI
+25/09/2024 11:51:41 - test a supprimé l'article Casble HDMI
+25/09/2024 11:51:44 - test a crée un article : Casble HDMI
+25/09/2024 12:18:32 - test a crée un article : sasasa
+25/09/2024 12:18:42 - test a reservé l'article : sasasa, quantité restantes : 4
+25/09/2024 12:18:43 - test a reservé l'article : Casble HDMI, quantité restantes : 14
+25/09/2024 12:20:16 - test a reservé l'article : sasasa, quantité restantes : 3
+25/09/2024 12:20:17 - test a reservé l'article : sasasa, quantité restantes : 2
+25/09/2024 12:20:41 - test a rendu l'article : sasasa, quantité : 3
+25/09/2024 12:20:41 - test a rendu l'article : Casble HDMI, quantité : 15
+25/09/2024 12:20:42 - test a rendu l'article : sasasa, quantité : 4
+25/09/2024 12:20:42 - test a rendu l'article : sasasa, quantité : 5
+25/09/2024 14:30:17 - test a reservé l'article : Casble HDMI, quantité restantes : 14
+25/09/2024 14:30:18 - test a reservé l'article : Casble HDMI, quantité restantes : 13
+25/09/2024 14:30:19 - test a reservé l'article : Casble HDMI, quantité restantes : 12
+25/09/2024 14:33:52 - admin a reservé l'article : sasasa, quantité restantes : 4
+25/09/2024 14:33:53 - admin a reservé l'article : sasasa, quantité restantes : 3
+25/09/2024 16:24:32 - test a rendu l'article : Casble HDMI, quantité : 13
+25/09/2024 16:25:19 - test a rendu l'article : Casble HDMI, quantité : 14
+25/09/2024 16:25:20 - test a rendu l'article : Casble HDMI, quantité : 15
+25/09/2024 16:25:28 - test a reservé l'article : sasasa, quantité restantes : 2
+25/09/2024 16:25:29 - test a reservé l'article : sasasa, quantité restantes : 1
+25/09/2024 16:26:09 - test a rendu l'article : sasasa, quantité : 2
+25/09/2024 16:26:10 - test a rendu l'article : sasasa, quantité : 3
+25/09/2024 16:26:17 - test a reservé l'article : sasasa, quantité restantes : 2
+25/09/2024 16:26:18 - test a reservé l'article : sasasa, quantité restantes : 1
+25/09/2024 16:26:18 - test a reservé l'article : Casble HDMI, quantité restantes : 14
+25/09/2024 18:51:53 - test a crée un article : Rasberi pi
+25/09/2024 18:52:01 - test a reservé l'article : Rasberi pi, quantité restantes : 2
+25/09/2024 18:52:02 - test a reservé l'article : Rasberi pi, quantité restantes : 1
+25/09/2024 18:52:05 - test a rendu l'article : sasasa, quantité : 2
+25/09/2024 18:52:06 - test a rendu l'article : sasasa, quantité : 3
+25/09/2024 18:52:06 - test a rendu l'article : Casble HDMI, quantité : 15
+25/09/2024 18:52:06 - test a rendu l'article : Rasberi pi, quantité : 2
+25/09/2024 18:52:06 - test a rendu l'article : Rasberi pi, quantité : 3

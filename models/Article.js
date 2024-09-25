@@ -26,6 +26,10 @@ const Article = sequelize.define("Article", {
       allowNull: false,
       defaultValue: 1,
    },
+   urlImage: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+   },
 });
 
 module.exports = Article;

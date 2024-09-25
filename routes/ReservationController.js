@@ -23,7 +23,7 @@ ReservationController.get("/", async (req, res) => {
             {
                model: Article,
                as: "article",
-               attributes: ["name"],
+               attributes: ["name", "urlImage"],
             },
          ],
       });
@@ -34,6 +34,7 @@ ReservationController.get("/", async (req, res) => {
          username: reservation.user.username,
          idArticle: reservation.articleId,
          article: reservation.article.name,
+         urlImage: reservation.article.urlImage,
       }));
 
       res.status(200).json({ success: true, message: "Voici la liste des réservations.", reservations: formattedReservations });
@@ -58,7 +59,7 @@ ReservationController.get("/:userId", async (req, res) => {
             {
                model: Article,
                as: "article",
-               attributes: ["name"],
+               attributes: ["name", "urlImage"],
             },
          ],
       });
@@ -69,6 +70,7 @@ ReservationController.get("/:userId", async (req, res) => {
          username: reservation.user.username,
          idArticle: reservation.articleId,
          article: reservation.article.name,
+         urlImage: reservation.article.urlImage,
       }));
 
       res.status(200).json({ success: true, message: "Voici la liste des réservations.", reservations: formattedReservations });

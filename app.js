@@ -26,6 +26,8 @@ app.use(
 
 app.use(bodyParser.json());
 
+app.use("/api/uploads", express.static("uploads"));
+
 app.use("/api/login", LoginController);
 app.use("/api/register", RegisterController);
 

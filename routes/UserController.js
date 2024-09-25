@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const authenticateToken = require("../config/authenticateToken");
 const logMessage = require("../config/logMessage");
-
+const sequelize = require("sequelize");
 dotenv.config();
 
 const UserController = express.Router();
@@ -16,14 +16,22 @@ const Article = require("../models/Article");
 UserController.get("/", async (req, res) => {
    try {
       const users = await User.findAll({
-         attributes: ["id", "role", "username", "createdAt"],
+         attributes: ["id", "role", "username", "createdAt", [sequelize.fn("COUNT", sequelize.col("reservations.id")), "reservationCount"]],
+         include: [
+            {
+               model: Reservation,
+               as: "reservations",
+               attributes: [],
+            },
+         ],
+         group: ["User.id"],
       });
+
       res.status(200).json({ success: true, message: "Voici la liste des utilisateurs.", users: users });
    } catch (error) {
       res.status(500).json({ success: false, error: `Une erreur est survenue : ${error}` });
    }
 });
-
 UserController.get("/:id", authenticateToken, async (req, res) => {
    const loggedInUserId = req.user.id; // ID de l'utilisateur connecté
    const userRole = req.user.role; // Rôle de l'utilisateur connecté
