@@ -157,3 +157,18 @@
 25/09/2024 18:52:06 - test a rendu l'article : Casble HDMI, quantité : 15
 25/09/2024 18:52:06 - test a rendu l'article : Rasberi pi, quantité : 2
 25/09/2024 18:52:06 - test a rendu l'article : Rasberi pi, quantité : 3
+25/09/2024 19:15:36 - test a supprimé l'article sasasa
+25/09/2024 19:15:43 - test a supprimé l'article Casble HDMI
+25/09/2024 19:15:53 - test a reservé l'article : Rasberi pi, quantité restantes : 2
+25/09/2024 19:15:53 - test a reservé l'article : Rasberi pi, quantité restantes : 1
+25/09/2024 19:28:29 - test a supprimé l'article Rasberi pi
+25/09/2024 19:28:49 - test a crée un article : czcz
+25/09/2024 19:29:07 - test a reservé l'article : czcz, quantité restantes : 3
+25/09/2024 19:38:52 - test a modifié l'article Rasberi pi
+25/09/2024 20:06:16 - test a reservé l'article : Ordinateur double écran, quantité restantes : 0
+25/09/2024 20:06:20 - test a reservé l'article : Drone, quantité restantes : 0
+25/09/2024 20:06:27 - test a rendu l'article : Ordinateur double écran, quantité : 1
+25/09/2024 20:06:28 - test a rendu l'article : Drone, quantité : 1
+25/09/2024 20:06:29 - test a rendu l'article : Rasberi pi, quantité : 4
+26/09/2024 9:04:25 - test a supprimé l'article Rasberi pi
+26/09/2024 9:26:32 - test a reservé l'article : Ordinateur double écran, quantité restantes : 0

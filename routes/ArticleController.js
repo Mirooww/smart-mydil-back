@@ -30,18 +30,38 @@ ArticleController.get("/:id", async (req, res) => {
    }
 });
 const multer = require("multer");
-
-const storage = multer.diskStorage({
-   destination: function (req, file, cb) {
-      cb(null, "uploads/");
-   },
-   filename: function (req, file, cb) {
-      cb(null, Date.now() + path.extname(file.originalname));
-   },
-});
-
-const upload = multer({ storage: storage });
+const sharp = require("sharp");
 const path = require("path");
+const fs = require("fs");
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+const resizeAndSaveImage = async (req, res, next) => {
+   if (!req.file) return next();
+
+   const filename = Date.now() + path.extname(req.file.originalname);
+   const filepath = path.join("uploads", filename);
+
+   try {
+      await sharp(req.file.buffer)
+         .resize({
+            width: 180,
+            height: 130,
+            fit: sharp.fit.cover,
+            position: sharp.strategy.entropy,
+         })
+         .toFile(filepath);
+
+      req.file.filename = filename;
+      req.file.path = filepath;
+   } catch (error) {
+      return res.status(500).json({ success: false, error: `Erreur lors du traitement de l'image : ${error.message}` });
+   }
+
+   next();
+};
+
 // Middleware pour parser les données JSON dans un champ spécifique
 const parseData = (req, res, next) => {
    if (req.body.data) {
@@ -55,22 +75,20 @@ const parseData = (req, res, next) => {
 };
 
 // Côté ADMIN
-ArticleController.post("/", authenticateToken, upload.single("image"), parseData, async (req, res) => {
+ArticleController.post("/", authenticateToken, upload.single("image"), resizeAndSaveImage, parseData, async (req, res) => {
    const userRole = req.user.role; // Rôle de l'utilisateur connecté
    const username = req.user.username;
-   console.log("1");
+
    if (userRole !== "admin") {
       return res.status(403).json({ success: false, error: "Accès refusé : Vous n'êtes pas autorisé à créer un article !." });
    }
 
    try {
-      console.log("2");
       let { type, name, description, quantity } = req.body;
-      console.log("Received data:", req.body); // Ajoutez cette ligne pour vérifier les données reçues
+      console.log("Received data:", req.body);
       const urlImage = req.file ? `/uploads/${req.file.filename}` : null;
 
       const newArticle = await Article.create({ type, name, description, quantity, urlImage });
-      console.log("3:", newArticle);
       logMessage(`${username} a crée un article : ${newArticle.name}`);
       res.json({ success: true, message: "Article ajouté avec succès", newArticle });
    } catch (error) {
